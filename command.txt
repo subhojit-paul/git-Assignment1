@@ -1,0 +1,682 @@
+
+SUBHOJIT@DESKTOP-UUF41O9 MINGW64 /f/Training_Days/Assignment_day_1
+$ git init
+Initialized empty Git repository in F:/Training_Days/Assignment_day_1/.git/
+
+ 
+$ ls
+
+ 
+$ code README.md
+
+ 
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ 
+$ git add .
+
+ 
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+
+
+ 
+$ git commit -m "Add README.md File"
+[master (root-commit) a1de19f] Add README.md File
+ 1 file changed, 3 insertions(+)
+ create mode 100644 README.md
+
+ 
+$ git log
+commit a1de19fb7c467ffed659f1473cbe699e075558eb (HEAD -> master)
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 19:42:38 2020 +0530
+
+    Add README.md File
+
+ 
+$ code README.md
+
+ 
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ 
+$ git add .
+
+ 
+$ git commit -m "Modify README.md File"
+[master cd51d5b] Modify README.md File
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+ 
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ 
+$ git log
+commit cd51d5b4063e60f03353b92a36dc50faa3dba45b (HEAD -> master)
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 19:45:26 2020 +0530
+
+    Modify README.md File
+
+commit a1de19fb7c467ffed659f1473cbe699e075558eb
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 19:42:38 2020 +0530
+
+    Add README.md File
+
+ 
+$ git log --oneline
+cd51d5b (HEAD -> master) Modify README.md File
+a1de19f Add README.md File
+
+ 
+$ git diff cd51 a1de
+diff --git a/README.md b/README.md
+index 1b62b1e..d281a00 100644
+--- a/README.md
++++ b/README.md
+@@ -1,5 +1,3 @@
+ ## This is the Folder where Assignment's of First day will store by Subhojit
+
+-Here is the **README** file.
+-
+-### Here is the tag <h4> Adding a new line </h4>
+\ No newline at end of file
++Here is the **README** file.
+\ No newline at end of file
+
+ 
+$ git reset HEAD~1
+Unstaged changes after reset:
+M       README.md
+
+ 
+$ git log --oneline
+a1de19f (HEAD -> master) Add README.md File
+
+ 
+$ code README.md
+
+ 
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ 
+$ git add .
+
+ 
+$ git commit -m "Modify README.md File"
+[master f8c71dd] Modify README.md File
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+ 
+$ git log --oneline
+f8c71dd (HEAD -> master) Modify README.md File
+a1de19f Add README.md File
+
+ 
+$ ls
+README.md
+
+ 
+$ code first.html
+
+ 
+$ git add .
+
+ 
+$ git commit -m "ADD first.html File"
+[master c2be504] ADD first.html File
+ 1 file changed, 17 insertions(+)
+ create mode 100644 first.html
+
+ 
+$ code Hello.c
+
+ 
+$ git add .
+
+ 
+$ git commit -m "ADD Hello.c File"
+[master 8499088] ADD Hello.c File
+ 1 file changed, 7 insertions(+)
+ create mode 100644 Hello.c
+
+ 
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ 
+$ git log
+commit 84990884e59741ddf0fad8cede93dc53780d84fc (HEAD -> master)
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 20:33:50 2020 +0530
+
+    ADD Hello.c File
+
+commit c2be5045679c3fff05c05b33b616e61d4fc9ac1f
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 20:14:56 2020 +0530
+
+    ADD first.html File
+
+commit f8c71dd5d0d66305964028157d73214e865a4e9f
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 19:52:38 2020 +0530
+
+    Modify README.md File
+
+commit a1de19fb7c467ffed659f1473cbe699e075558eb
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 19:42:38 2020 +0530
+
+    Add README.md File
+
+ 
+$ git log
+commit 84990884e59741ddf0fad8cede93dc53780d84fc (HEAD -> master)
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 20:33:50 2020 +0530
+
+    ADD Hello.c File
+
+commit c2be5045679c3fff05c05b33b616e61d4fc9ac1f
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 20:14:56 2020 +0530
+
+    ADD first.html File
+
+commit f8c71dd5d0d66305964028157d73214e865a4e9f
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 19:52:38 2020 +0530
+
+    Modify README.md File
+
+commit a1de19fb7c467ffed659f1473cbe699e075558eb
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 19:42:38 2020 +0530
+
+    Add README.md File
+
+ 
+$ git log --oneline
+8499088 (HEAD -> master) ADD Hello.c File
+c2be504 ADD first.html File
+f8c71dd Modify README.md File
+a1de19f Add README.md File
+
+ 
+$ ls
+first.html  Hello.c  README.md
+
+ 
+$ git -b adder
+unknown option: -b
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+ 
+$ git branch
+* master
+
+ 
+$ git checkout adder
+error: pathspec 'adder' did not match any file(s) known to git
+
+ 
+$ git checkout -b adder
+Switched to a new branch 'adder'
+
+   
+$ git branch
+* adder
+  master
+
+   
+$ ls
+first.html  Hello.c  README.md
+
+   
+$ git checkout master
+Switched to branch 'master'
+
+ 
+$ git branch
+  adder
+* master
+
+ 
+$ git remote add origin https://github.com/subhojit-paul/git-Assignment1.git
+
+ 
+$ git push -u origin master
+fatal: HttpRequestException encountered.
+   An error occurred while sending the request.
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/subhojit-paul/git-Assignment1.git/'
+
+ 
+$ git push -u origin master
+fatal: HttpRequestException encountered.
+   An error occurred while sending the request.
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (12/12), 1.36 KiB | 463.00 KiB/s, done.
+Total 12 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/subhojit-paul/git-Assignment1.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+ 
+$ git checkout adder
+Switched to branch 'adder'
+
+   
+$ ls
+first.html  Hello.c  README.md
+
+   
+$ code first.css
+
+   
+$ git add .
+
+   
+$ git commit -m "Add first.css"
+[adder 84ff3aa] Add first.css
+ 1 file changed, 11 insertions(+)
+ create mode 100644 first.css
+
+   
+$ git status
+On branch adder
+nothing to commit, working tree clean
+
+   
+$ ls
+first.css  first.html  Hello.c  README.md
+
+   
+$ code first.html
+
+   
+$ git add .
+
+   
+$ git commit -m "Modify first.html"
+[adder eed51bd] Modify first.html
+ 1 file changed, 14 insertions(+)
+
+   
+$ git log --oneline
+eed51bd (HEAD -> adder) Modify first.html
+84ff3aa Add first.css
+8499088 (origin/master, master) ADD Hello.c File
+c2be504 ADD first.html File
+f8c71dd Modify README.md File
+a1de19f Add README.md File
+
+   
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+ 
+$ git merge adder
+Updating 8499088..eed51bd
+Fast-forward
+ first.css  | 11 +++++++++++
+ first.html | 14 ++++++++++++++
+ 2 files changed, 25 insertions(+)
+ create mode 100644 first.css
+
+ 
+$ git diff master adder
+
+ 
+$ git diff master adder
+
+ 
+$ git checkout -b newbranch
+Switched to a new branch 'newbranch'
+
+  
+$ git branch
+  adder
+  master
+* newbranch
+
+  
+$ ls
+first.css  first.html  Hello.c  README.md
+
+  
+$ code hello.py
+
+  
+$ git add .
+
+  
+$ git commit -m "Add hello.py"
+[newbranch 1a90e69] Add hello.py
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.py
+
+  
+$ git log
+commit 1a90e69ae69c2492c4befbaf3c77913bd5c7a4e3 (HEAD -> newbranch)
+commit 1a90e69ae69c2492c4befbaf3c77913bd5c7a4e3 (HEAD -> newbranch)
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 21:45:31 2020 +0530
+
+    Add hello.py
+
+commit eed51bd9b3f78472f03e736cdf1d0d583e35574c (master, adder)
+commit 1a90e69ae69c2492c4befbaf3c77913bd5c7a4e3 (HEAD -> newbranch)
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 21:45:31 2020 +0530
+
+    Add hello.py
+
+commit eed51bd9b3f78472f03e736cdf1d0d583e35574c (master, adder)
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 21:34:52 2020 +0530
+
+    Modify first.html
+
+commit 84ff3aa33eee857966df9ac7f7456b8536bf1c0f
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 21:15:09 2020 +0530
+
+    Add first.css
+
+commit 84990884e59741ddf0fad8cede93dc53780d84fc (origin/master)
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 20:33:50 2020 +0530
+
+    ADD Hello.c File
+:...skipping...
+commit 1a90e69ae69c2492c4befbaf3c77913bd5c7a4e3 (HEAD -> newbranch)
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 21:45:31 2020 +0530
+
+    Add hello.py
+
+commit eed51bd9b3f78472f03e736cdf1d0d583e35574c (master, adder)
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 21:34:52 2020 +0530
+
+    Modify first.html
+
+commit 84ff3aa33eee857966df9ac7f7456b8536bf1c0f
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 21:15:09 2020 +0530
+
+    Add first.css
+
+commit 84990884e59741ddf0fad8cede93dc53780d84fc (origin/master)
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 20:33:50 2020 +0530
+
+    ADD Hello.c File
+
+commit c2be5045679c3fff05c05b33b616e61d4fc9ac1f
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 20:14:56 2020 +0530
+
+    ADD first.html File
+
+commit f8c71dd5d0d66305964028157d73214e865a4e9f
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 19:52:38 2020 +0530
+
+    Modify README.md File
+
+commit a1de19fb7c467ffed659f1473cbe699e075558eb
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 19:42:38 2020 +0530
+
+    Add README.md File
+~
+~
+~
+~
+~
+~
+~
+~
+
+  
+$ git log --oneline
+1a90e69 (HEAD -> newbranch) Add hello.py
+eed51bd (master, adder) Modify first.html
+84ff3aa Add first.css
+8499088 (origin/master) ADD Hello.c File
+c2be504 ADD first.html File
+f8c71dd Modify README.md File
+a1de19f Add README.md File
+
+  
+$ git checkout  master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+ 
+$ ls
+first.css  first.html  Hello.c  README.md
+
+ 
+$ code first.html
+
+ 
+$ git add .
+
+ 
+$ git commit -m "Modify first.html"
+[master 6c5200f] Modify first.html
+ 1 file changed, 1 insertion(+)
+
+ 
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ 
+$ git checkout newbranch
+Switched to branch 'newbranch'
+
+  
+$ git branch
+  adder
+  master
+* newbranch
+
+  
+$ ls
+first.css  first.html  Hello.c  hello.py  README.md
+
+  
+$ code Hello.c
+
+  
+$ git add .
+
+  
+$ git commit -m "Modify Hello.c file"
+[newbranch 5c9a328] Modify Hello.c file
+ 1 file changed, 1 insertion(+)
+
+  
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+ 
+$ git merge newbranch
+Merge made by the 'recursive' strategy.
+ Hello.c  | 1 +
+ hello.py | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 hello.py
+
+ 
+$ ls
+first.css  first.html  Hello.c  hello.py  README.md
+
+ 
+$ git diff master newbranch
+diff --git a/first.html b/first.html
+index 16f4295..abfda50 100644
+commit 5c9a328743c808aa36bb4c5ef9d0d3993141e268 (newbranch)
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 21:54:14 2020 +0530
+
+commit 06f4aafb95897f25ba60edb9d5a7e9ccc17f98cc (HEAD -> master)
+Merge: 6c5200f 5c9a328
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 21:54:53 2020 +0530
+
+    Merge branch 'newbranch'
+
+commit 5c9a328743c808aa36bb4c5ef9d0d3993141e268 (newbranch)
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 21:54:14 2020 +0530
+
+    Modify Hello.c file
+
+commit 6c5200f31dc7b6b6447abe2546e1d53abc0fd975
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 21:50:25 2020 +0530
+
+    Modify first.html
+
+commit 1a90e69ae69c2492c4befbaf3c77913bd5c7a4e3
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 21:45:31 2020 +0530
+
+    Add hello.py
+
+commit eed51bd9b3f78472f03e736cdf1d0d583e35574c (adder)
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 21:34:52 2020 +0530
+
+    Modify first.html
+
+commit 84ff3aa33eee857966df9ac7f7456b8536bf1c0f
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 21:15:09 2020 +0530
+
+    Add first.css
+
+commit 84990884e59741ddf0fad8cede93dc53780d84fc (origin/master)
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 20:33:50 2020 +0530
+
+    ADD Hello.c File
+
+commit c2be5045679c3fff05c05b33b616e61d4fc9ac1f
+Author: Subhojit paul <subhojit.paul@zensar.com>
+Date:   Tue Jul 14 20:14:56 2020 +0530
+
+    ADD first.html File
+
+No next tag  (press RETURN)
+
+ 
+git log --oneline
+06f4aaf (HEAD -> master) Merge branch 'newbranch'
+5c9a328 (newbranch) Modify Hello.c file
+6c5200f Modify first.html
+1a90e69 Add hello.py
+eed51bd (adder) Modify first.html
+84ff3aa Add first.css
+8499088 (origin/master) ADD Hello.c File
+c2be504 ADD first.html File
+f8c71dd Modify README.md File
+a1de19f Add README.md File
+
+ 
+$ git remote add origin https://github.com/subhojit-paul/git-Assignment1.git
+fatal: remote origin already exists.
+
+ 
+$ git push -u origin master
+Enumerating objects: 20, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (17/17), 1.77 KiB | 602.00 KiB/s, done.
+Total 17 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), completed with 1 local object.
+To https://github.com/subhojit-paul/git-Assignment1.git
+   8499088..06f4aaf  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+ 
+$ git log --oneline --graph --decorate
+*   06f4aaf (HEAD -> master, origin/master) Merge branch 'newbranch'
+|\
+| * 5c9a328 (newbranch) Modify Hello.c file
+| * 1a90e69 Add hello.py
+* | 6c5200f Modify first.html
+|/
+* eed51bd (adder) Modify first.html
+* 84ff3aa Add first.css
+* 8499088 ADD Hello.c File
+* c2be504 ADD first.html File
+* f8c71dd Modify README.md File
+* a1de19f Add README.md File
+
+ 
+$ $ git log --oneline
+a1de19f Add README.md Filebash: $: command not found
+
+ 
+$ cd51d5b (HEAD -> master) Modify README.md File
+bash: syntax error near unexpected token `HEAD'
+
+ 
+$ a1de19f Add README.md File
